@@ -7,14 +7,28 @@ body {
     padding: 0;
 }
 
-input[type="email"] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+@keyframes title {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#title {
+    animation: title 1s ease-in;
+}
+
+@keyframes button {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 button {
@@ -27,4 +41,54 @@ button {
     border-radius: 4px;
     cursor: pointer;
     margin-top: 15px;
+    animation: button 1s ease-in;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    50% {
+        transform: translate(-5px, -10px) rotate(-1deg);
+    }
+    100% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+}
+
+.image {
+    width: 500px;
+    height: 500px;
+    animation: shake 5s infinite;
+}
+
+#cardRight {
+    margin-top: 10px;
+    border-top: 4px solid black;
+    border-right: 4px solid black;
+    border-bottom: 4px solid black;
+    border-radius: 0 10px 10px 0;
+}
+
+#cardLeft {
+    margin-top: 10px;
+    border-top: 4px solid black;
+    border-left: 4px solid black;
+    border-bottom: 4px solid black;
+    border-radius: 10px 0 0 10px;
+}
+
+@keyframes footer {
+    0% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(1100px);
+    }
+
+}
+
+#footer {
+    animation: footer 12s ease-in 1s infinite;
+    width: 220px;
 }
